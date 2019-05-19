@@ -201,7 +201,7 @@ def run_epoch(supervisor, sess, m, dataset, hparams, eval_op, experiment_type,
   # Make summaries.
   if FLAGS.log_progress:
     summaries = tf.Summary()
-    for stat_name, stat in run_stats.iteritems():
+    for stat_name, stat in run_stats.items():
       value = summaries.value.add()
       value.tag = '%s_%s' % (stat_name, experiment_type)
       value.simple_value = stat
